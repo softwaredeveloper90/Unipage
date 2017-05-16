@@ -1,1 +1,1 @@
-document.getElementById("index").innerHTML = "Hello JavaScript!";
+document.getElementById("index").innerHTML = "Swoon University";
