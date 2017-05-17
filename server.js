@@ -4,17 +4,36 @@ var express = require("express");
 var app = express();
 
 var apiData = [1,2,3,4,5,6,7,8,9,0]
+var sqlite = require('sqlite')
+var Mustache = require ('mustache');
 
-app.use(function (req, res, next) {
-	console.log("The resource " + req.url + " was requested.");
-	next();
+sqlite.open('./database.sqlite').then(function(db) {
+    app.use(express.static(__dirname + '/Public'));
+    
+    app.get('/courses', function(req, res) {
+        db.all("SELECT * FROM Courses").then(function(rows) {
+            var file = fs.readFileSync('templates/course-page.mst', "utf8");
+            var html = Mustache.to_html(file, {courses: rows});
+            return res.send(html);
+        
+        });
+    });
+    app.get('/courses/search/:term?', function(req, res) {
+        db.all(
+            "SELECT * FROM Courses WHERE name LIKE '%'||$what_i_want||'%'",
+            {$what_i_want: req.params.term||req.query.term}
+        ).then(function(rows) {
+            var file = fs.readFileSync('templates/course-page.mst', "utf8");
+            var html = Mustache.to_html(file, {courses: rows});
+            return res.send(html);
+        
+        });
+    });
+    
+    
+    var server = http.createServer(app);
+    console.log("Listening on http://127.0.0.1:8080");
+    server.listen('8080', '127.0.0.1');
+}).catch(function(err) {
+    console.error(err.stack);
 });
-app.use(express.static(__dirname + '/Public'));
-
-app.get('/api/*', function (req, res) {
-    res.json(apiData);
-})
-
-var server = http.createServer(app);
-console.log("Listening on http://127.0.0.1:8080");
-server.listen('8080', '127.0.0.1');
