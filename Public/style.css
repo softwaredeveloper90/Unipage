@@ -18,9 +18,11 @@ img {
 
 a {
 	text-align: center;
-	font-family: 'Baloo', cursive;
-    	color: DarkGrey;
+	font-family: 'Catamaran', cursive;
+    color: lightgrey;
+    text-decoration: none;
 }
+
 .search-listing {
 	position: relative;
 }
@@ -53,7 +55,7 @@ a {
 
  
 input[type=text] {
-    width:600px;
+    width:300px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -89,7 +91,7 @@ div.tab a {
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    font: 13.3333px Arial;
+    font-family: 'Catamaran', serif;
     text-decoration: none;
     display: inline-block;
 }
@@ -102,6 +104,7 @@ div.tab a :hover {
 
 div.tab a :visited {
     color: #000;
+    font-family: 'Martel', serif;
 }
 
 /* Create an active/current tablink class */
@@ -117,19 +120,26 @@ div.tab a.active {
     border-top: none;
 }
 a.tablinks {
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Martel', sans-serif;
     color: black;
+    
     
 }
 
 .course_details {
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Martel', serif;
+    text-align: center;
     color: white;
     font-size: 50px;
-    text-align: center;
 }
 
 .course-name {
+    font-family: 'Assistant', sans-serif;
+    color: lightgrey;
+    text-align: center;
+}
+
+h1 {
     font-family: 'Assistant', sans-serif;
     color: lightgrey;
     text-align: center;
@@ -139,6 +149,7 @@ a.tablinks {
     font-family: 'Martel', serif;
     text-align: center;
     color: white;
+    font-size: 70px;
     
 }
 

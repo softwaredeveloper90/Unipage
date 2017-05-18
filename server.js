@@ -29,6 +29,17 @@ sqlite.open('./database.sqlite').then(function(db) {
         
         });
     });
+    app.get('/courses/:id', function(req, res) {
+        db.get(
+            "SELECT * FROM Courses WHERE id=$id",
+            {$id: req.params.id}
+        ).then(function(row) {
+            var file = fs.readFileSync('templates/single-course-page.mst', "utf8");
+            var html = Mustache.to_html(file, row);
+            return res.send(html);
+        
+        });
+    });
     
     
     var server = http.createServer(app);
