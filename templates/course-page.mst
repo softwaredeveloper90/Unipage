@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title> Swoon University - Course Search </title>
+    <head>
+        <title> Swoon University - Course Search </title>
+
         <link rel="stylesheet" type="text/css" href="/style.css">
         <link href="https://fonts.googleapis.com/css?family=Heebo" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Catamaran:100|Heebo" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Assistant:200" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Martel:300" rel="stylesheet">
-</head>
-<body>
+    </head>
+    
+    <body>
+          <div class="basket" id="header-basket"> <a href ="/viewbasket.html">Basket:<span id="basket-count">0</span> items </a></div>
 
-    <div class="basket" id="header-basket">Basket:<span id="basket-count">0</span> items</div>
-   
-   <div class="tab">
-  <a class="tablinks" href="/courses">Courses</a>
-  <a class="tablinks" >Undergraduate</a>
-  <a class="tablinks" >Postgraduate</a>
-  <a class="tablinks" >Short courses</a>
-  <a class="tablinks" >Map</a>
-  <a class="tablinks" href="/contactUs.html">Contact Us</a>
-    </div>
-    
-<h1 class="SwoonUniversityText">SWOON UNIVERSITY</h1>
-    
-<h2 class="course_details"id="index">Availble courses</h2>
+        <div class="tab">
+          <a class="tablinks" href="/courses">Courses</a>
+          <a class="tablinks" >Undergraduate</a>
+          <a class="tablinks" >Postgraduate</a>
+          <a class="tablinks" >Short courses</a>
+          <a class="tablinks" >Map</a>
+          <a class="tablinks" href="/contactUs.html">Contact Us</a>
+        </div>
+
+        <h1 class="SwoonUniversityText">SWOON UNIVERSITY</h1>
+
+        <h2 class="course_details"id="index">Availble courses</h2>
 
         <div class="course-page">
-                {{#courses}}
-                <div class="course">
-                    <h1 class="course-name"><a href="/courses/{{ id }}">{{ name }} </a></h1>
+            {{#courses}}
+            <div class="course">
+                <h1 class="course-name"><a href="/courses/{{ id }}">{{ name }} </a></h1>
             </div>
-        {{/courses}}
-    </div>
- <form action="/courses/search" method="get">
+            {{/courses}}
+        </div>
         
-        <input type="text" name="term" placeholder="Search for a course!">
-    </form>
+        <form action="/courses/search" method="get">
+            <input type="text" name="term" placeholder="Search for a course!">
+        </form>
+
+        <br>
+        <br>
+
+        <form action="/index.html" method="get">
+            <button class="HomeButton">Home</button>
+        </form>    
+
+        <script src="/app.js" type="text/javascript"></script>
+        
+    </body>
     
-    <br>
-    
-    <br>
-    
-<form action="/index.html" method="get">
-	<button class="HomeButton">Home</button>
-    </form>    
-    
-<script src="/app.js" type="text/javascript"></script>
-</body>
 </html>
 
 

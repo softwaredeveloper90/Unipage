@@ -5,8 +5,6 @@ body {
     color: lightgray;
 }
 
-
-
 p {
     text-align: center;
     font-family: 'Catamaran', cursive;
@@ -15,7 +13,7 @@ p {
 
 img {
 	max-width: 1000px;
-    	margin: auto;
+    margin: auto;
 }
 
 a {
@@ -52,9 +50,7 @@ a {
     text-align: center;
     max-height: 250px;
     max-width: 700px;
-    
 }
-
  
 input[type=text] {
     width:300px;
@@ -76,15 +72,12 @@ input[type=text]:focus {
     width: 60%;
 }
 
-/* Style the tab */
 div.tab {
     overflow: hidden;
     border: 1px solid, whitesmoke;
-    background-color: whitesmoke;
-    
+    background-color: whitesmoke; 
 }
 
-/* Style the buttons inside the tab */
 div.tab a {
     background-color: inherit;
     float: relative;
@@ -98,11 +91,9 @@ div.tab a {
     display: inline-block;
 }
 
-/* Change background color of buttons on hover */
-div.tab a :hover {
-    background-color: pink;
-    color: aqua;
-    
+div.tab a:hover {
+    background-color: lightgray;
+    color: hotpink;
 }
 
 div.tab a :visited {
@@ -110,24 +101,21 @@ div.tab a :visited {
     font-family: 'Martel', serif;
 }
 
-/* Create an active/current tablink class */
 div.tab a.active {
     background-color: lightpink;
 }
 
-/* Style the tab content */
 .tabcontent {
     display: none;
     padding: 6px 12px;
     border: 1px solid #ccc;
     border-top: none;
 }
+
 a.tablinks {
     font-family: 'Martel', sans-serif;
     color: black;
     font-size: 25px;
-    
-    
 }
 
 .course_details {
@@ -161,7 +149,6 @@ h2 {
     text-align: center;
     color: white;
     font-size: 70px;
-    
 }
 
 .HomeButton {
@@ -184,4 +171,8 @@ h2 {
     background-color: whitesmoke;
     border: none;
     font-size: 20px;
+}
+
+.cartpic {
+    max-width: 100px;
 }
