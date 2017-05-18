@@ -125,6 +125,7 @@ div.tab a.active {
 a.tablinks {
     font-family: 'Martel', sans-serif;
     color: black;
+    font-size: 25px;
     
     
 }
@@ -172,4 +173,15 @@ h2 {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+
+.basket {
+    font-family: 'Assistant', sans-serif;
+    color: black;
+    text-align: right;
+    padding: 25px, 25px;
+    font-weight: 200px;
+    background-color: whitesmoke;
+    border: none;
+    font-size: 20px;
 }
