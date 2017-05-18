@@ -1,13 +1,15 @@
 body {
     background-color:dimgrey;
 	text-align: center;
+    font-family: 'Catamaran', cursive;
+    color: lightgray;
 }
 
-}
+
 
 p {
-text-align: center;
-    font-family: 'Baloo', cursive;
+    text-align: center;
+    font-family: 'Catamaran', cursive;
     font-size: 20px;
 }
 
@@ -49,7 +51,7 @@ a {
     font-family: 'Catamaran', sans-serif;
     text-align: center;
     max-height: 250px;
-    max-width: 500px;
+    max-width: 700px;
     
 }
 
@@ -64,14 +66,14 @@ input[type=text] {
     background-image: url('searchicon.png');
     background-position: center;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
+    padding: 12px 20px 12px 30px;
+    -webkit-transition: width 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
     align-content: center;
 }
 
 input[type=text]:focus {
-    width: 100%;
+    width: 60%;
 }
 
 /* Style the tab */
@@ -98,18 +100,19 @@ div.tab a {
 
 /* Change background color of buttons on hover */
 div.tab a :hover {
-    background-color: #ddd;
+    background-color: pink;
+    color: aqua;
     
 }
 
 div.tab a :visited {
-    color: #000;
+    color: mediumpurple;
     font-family: 'Martel', serif;
 }
 
 /* Create an active/current tablink class */
 div.tab a.active {
-    background-color: #ccc;
+    background-color: lightpink;
 }
 
 /* Style the tab content */
@@ -145,6 +148,13 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-family: 'Assistant', sans-serif;
+    color: lightgrey;
+    text-align: center;
+    font-size: 30px;
+}
+
 .SwoonUniversityText {
     font-family: 'Martel', serif;
     text-align: center;
@@ -153,3 +163,13 @@ h1 {
     
 }
 
+.HomeButton {
+    background-color: lightgray;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
